@@ -45,7 +45,7 @@ int main()
         cin.clear();
         cin.ignore(1000, '\n');
     }
-}
+
 int* taxi = new int[n];// номера машин
     int* employee = new int[n];// номера сотрудников
     float* tarif = new float [n];// тарифы
@@ -88,6 +88,7 @@ int* taxi = new int[n];// номера машин
                 cin.clear();
                 cin.ignore(1000, '\n');
             }
+        }
         
 for (i = 0; i < n; i++)
     {
