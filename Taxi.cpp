@@ -45,3 +45,46 @@ int main()
         cin.ignore(1000, '\n');
     }
 }
+int* taxi = new int[n];// номера машин
+    int* employee = new int[n];// номера сотрудников
+    float* tarif = new float [n];// тарифы
+    float* dist = new float[n];// расстояние
+    
+        for (i = 0; i < n; i++)
+        {
+            for (;;)// проверка ввода расстояния 
+            {
+                cout << "Введите в километрах расстояние (целое число, не меньше 1, не больше 1000) от работы до дома для сотрудника номер " << i + 1 << ": ";
+                cin >> dist[i];
+                if (!cin)
+                {
+                    cout << "Вы ввели не число"<<endl;
+                }
+                else
+                {
+                    if (dist[i] < 1)
+                    {
+                        cout << "Вы ввели число меньше 1"<<endl;
+                    }
+                    else
+                    {
+                        if (dist[i] > 1000)
+                        {
+                            cout << "Вы ввели число больше 1000"<<endl;
+                        }
+                        else
+                        {
+                            if (short(dist[i]) != dist[i])
+                                cout << "Вы ввели нецелое число"<<endl;
+                            else
+                            {
+                                employee[i] = i + 1;
+                                break;
+                            }
+                        }
+                    }
+                }
+                cin.clear();
+                cin.ignore(1000, '\n');
+            }
+        }
